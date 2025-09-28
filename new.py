@@ -268,3 +268,225 @@ fruits = ["apple", "banana", "cherry"]
 
 # 🔹 Lambda Functions (Anonymous Functions)
 
+# name = input("Enter your name:")
+
+# firstName = lambda name: name
+# print("I think your name is",firstName(name))
+
+
+# globle and local scop of variable
+# x = 10  # global
+
+# def demo():
+#     y = 5  # local
+#     print(x, y)
+#     print(y) 
+# demo()
+# print(x)  # 10
+# # print(y) 
+
+# exersice
+# check the entered number is even or odd
+# a = int(input("Enter the number:"))
+# def checkEO ():
+#     if a%2 ==0:
+#         print(a,"is even")
+#     else:
+#         print(a,"is odd")
+# checkEO()
+
+
+# def add_all(*args):
+#     return sum(args)
+# print(add_all(1, 2, 3, 4, 5))
+
+
+# factorial number
+# n = int(input("Enter the number"))
+
+# def factorial(n):
+#     if n == 0:
+#         return 1
+#     else:
+#         return n * factorial(n-1)
+# print(factorial(n))    
+
+# n = int(input("Enter the number:"))
+# cube = lambda n : n**3
+# print(cube(n))
+    
+
+
+# --------------------------------------------------------------------
+
+
+
+# Topic 7 — Data Structures in Python
+
+
+# 🔹 1. Lists
+# Ordered, mutable (can change), allow duplicates.
+# Defined with [].
+
+# marks = [78,98,76,85,87]
+# print(marks[2])
+# marks.insert(0,45) #(index number, value)
+# marks.remove(marks[2])
+# marks.pop()
+# marks.reverse()
+# print(marks)
+
+
+# 🔹 2. Tuples
+# Ordered, immutable (cannot change).
+# Defined with ().
+
+# names = ("nayan", "jay", "deep")
+# print(names[1])
+
+
+# 🔹 3. Sets
+# Unordered, mutable, no duplicates.
+# Defined with {} or set().
+
+# nums = {1,2,3,4,5,6,7,8,9}
+# nums.add(10)
+# nums.remove(2)
+# print(nums)
+
+# a = {1,2,3,4}
+# b = {4,5,6}
+
+# print(a|b) #Union
+# print(a&b) #Insersection
+# print(a-b) #Difference
+# print(b-a)
+# print(a^b) #Symmetric Difference
+
+
+
+# 🔹 4. Dictionaries
+# Key-value pairs, unordered, mutable.
+# Defined with {}.
+
+# name = input("Enter your name:")
+# age = int(input("Enter your age:"))
+# city = input("Enter your city:")
+# employee = {
+#     "name": name,
+#     "age": age,
+#     'city': city
+# }
+# employee.pop("city")
+# print(employee)
+# print(employee["name"])
+# print(employee.keys())
+# print(employee.values())
+# print(employee.items())
+
+
+# 🔹 Nesting Data Structures
+
+# student = [
+#     {
+#         "name":"nayan",
+#         "age": 22,
+#         "marks" : [88,87,95]
+#      },
+#      {
+#         "name":"Jay",
+#         "age": 23, 
+#         "marks" : [98,88,97]
+     
+#      }
+# ]
+
+# print(student[1]["marks"][2])
+
+# exersice
+
+# Create a list of 5 numbers and print the largest.
+
+# nums = [98,87,67,99,100]
+# print(max(nums))
+
+# Create a tuple with 5 colors and print them one by one.
+
+# colors = ("black", "blue", "pink","yellow", "white")
+# for i in range(len(colors)):
+#     print(colors[i])
+
+
+# mini project
+
+# Contact Book using Dictionary
+
+# contacts = {}   # empty dictionary to store contacts
+
+# def add_contact():
+#     name = input("Enter name: ")
+#     number = input("Enter phone number: ")
+#     contacts[name] = number
+#     print("✅ Contact Added!\n")
+
+# def search_contact():
+#     name = input("Enter name to search: ")
+#     if name in contacts:
+#         print(f"📞 {name} → {contacts[name]}\n")
+#     else:
+#         print("❌ Contact not found!\n")
+
+# def delete_contact():
+#     name = input("Enter name to delete: ")
+#     if name in contacts:
+#         del contacts[name]
+#         print("🗑️ Contact Deleted!\n")
+#     else:
+#         print("❌ Contact not found!\n")
+
+# def show_all():
+#     if contacts:
+#         print("\n📖 Contact List:")
+#         for name, number in contacts.items():
+#             print(f"{name} → {number}")
+#         print()
+#     else:
+#         print("📂 No contacts saved yet!\n")
+
+
+# # Main program loop
+# while True:
+#     print("=== Contact Book ===")
+#     print("1. Add Contact")
+#     print("2. Search Contact")
+#     print("3. Delete Contact")
+#     print("4. Show All Contacts")
+#     print("5. Exit")
+
+#     choice = input("Enter choice (1-5): ")
+
+#     if choice == "1":
+#         add_contact()
+#     elif choice == "2":
+#         search_contact()
+#     elif choice == "3":
+#         delete_contact()
+#     elif choice == "4":
+#         show_all()
+#     elif choice == "5":
+#         print("👋 Exiting Contact Book. Bye!")
+#         break
+#     else:
+#         print("⚠️ Invalid choice! Try again.\n")
+
+
+
+
+# ----------------------------------------------------------------------
+
+
+
+
+# Topic 8 — String Handling in Python
+
+
