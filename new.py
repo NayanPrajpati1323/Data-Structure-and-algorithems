@@ -488,5 +488,77 @@ fruits = ["apple", "banana", "cherry"]
 
 
 # Topic 8 — String Handling in Python
+# Strings are one of the most commonly used data types in Python. They are sequences of characters enclosed in single ('), double ("), or triple quotes (''' or """)
+
+# s11 = 'string1'
+# s12 = "srting21"
+# s31 = """this is multi liner string
+#     thisisi"""
+# print(s31)
+
+# 🔹 String Indexing and Slicing
+
+# text = "python"
+# print(text[0])
+# print(text[-1])
+# print(text[0:3])
+# print(text[:3])
+# print(text[2:])
+
+# 🔹 String Methods
+
+# msg = "    Hello     this    is    nayan"
+# print(msg.upper())
+# print(msg.lower())
+# print(msg.capitalize())
+# print(msg.strip())
+# print(msg.replace("Hello","oyyyy"))
+# print(msg.split())
+# print(".".join(msg))
 
 
+# 🔹 Searching in Strings
+
+# text = " I am learning Python for DSA"
+# print("Python" in text)
+# print("I" not in text)
+# print(text.find("DSA"))
+
+
+# 🔹 String Formatting
+
+# name = "nayan"
+# age = 22
+
+# print(f"Hey there my Name is {name} and my age is {age}")
+
+# escape sequences
+
+# print("Line1\nLine2")   # newline
+# print("Hello\tWorld")   # tab
+# print("He said \"Hi\"") # quotes inside string
+
+
+
+# 🔹 Raw Strings
+# Prefix with r to ignore escape characters:
+
+# path = r"C:\Users\Nayan\Desktop\All courses\python-learning"
+# print(path)
+
+
+# 🔹 Useful Functions with Strings
+
+# s = "Python"
+# print(len(s))      # 6
+# print(max(s))      # y (highest ASCII value)
+# print(min(s))      # P (lowest ASCII value)
+# print(sorted(s))   # ['P', 'h', 'n', 'o', 't', 'y']
+
+# 🔹 String Immutability
+
+# ⚠️ Strings are immutable (cannot be changed directly).
+
+
+
+# small exersize
