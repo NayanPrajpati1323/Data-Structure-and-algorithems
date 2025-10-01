@@ -562,3 +562,236 @@ fruits = ["apple", "banana", "cherry"]
 
 
 # small exersize
+
+# str = input("Enter the string:")
+# 1
+# def reverse_string(s):
+#     return s[::-1]
+# print(reverse_string(str))
+# 2
+# def counter(s):
+#     return len(s)
+# print(counter(str))
+# 3
+# def palindrome(s):
+#     if s == s[::-1]:
+#         return "its an palindrome"
+#     else:
+#         return "its not an palindrome"
+# print(palindrome(str))
+# 4
+# def replica(s):
+#     return s.replace(" ","-")
+# print(replica(str))
+# 5 print number of words
+# def word_counter(s):
+#     words = s.split()
+#     return len(words)
+# print(word_counter(str))
+
+# mini project
+
+# para = input("Enter the paragraph:")
+
+# def mini_task(s):
+#     words = s.split()
+#     return len(words)
+# print("Total number of words in the paragraph:",mini_task(para))
+# print("Unique words in the paragraph:", set(para.split()))
+# print("words frequincy in the paragraph:")
+# word_freq = {}
+# for word in para.split():
+#     if word in word_freq:
+#         word_freq[word] += 1
+#     else:
+#         word_freq[word] = 1
+# print(word_freq)
+
+
+
+
+
+# ----------------------------------------------------------------------
+
+
+
+
+
+
+
+# Topic 9 — File Handling in Python
+
+# File handling allows us to create, read, write, and manage files using Python.
+# Python provides a built-in function open() for this.
+
+
+# Syntax
+# open("filename", "mode")
+
+# Modes:
+# 'r' → read (default, file must exist)
+# 'w' → write (creates new or overwrites existing file)
+# 'a' → append (add to the end)
+# 'x' → create (error if file exists)
+# 'b' → binary mode (for images, videos, etc.)
+# 't' → text mode (default)
+
+# create a new file or update existing file
+# f = open("newfile","w")
+# f.write("hello this is my first file handling in python")
+# f.write("\nthis is nayan project ")
+# f.close()
+# print("file created successfully")
+
+
+# read the file
+# f = open("newfile","r")
+# print(f.read())
+# print(f.read(50))
+# print(f.readline())
+# print(f.readlines())
+
+
+# appending the files
+
+# f = open("newfile","a")
+# f.write("you can do it nayan just believe in yourself")
+# f.write("\njust keep learning and keep growing")
+# f.close()
+# print("file created successfully")
+
+
+
+
+# Using with (Best Practice)
+# with automatically closes the file:
+
+# with open("newfile","r") as f:
+#     data = f.read()
+#     print(data)
+
+
+
+# 🔹 Working with Binary Files (images, etc.)
+
+# with open("my.jpg","rb") as f:
+#     data = f.read()
+
+# with open("copy.jpg", "wb") as f: #it will duplicate the original file
+#     f.write(data)
+
+
+
+# 🔹 File Methods
+
+# f = open("test.txt", "r")
+# print(f.name)     # filename
+# print(f.mode)     # mode of opening
+# print(f.closed)   # False (open), True (closed)
+# f.close()
+
+
+
+# 🔹 Checking File Existence
+
+# import os
+# if os.path.exists("newfile"):
+#     print("FIle exist")
+# else:
+#     print("FIle not exist")
+
+
+# 🔹 Deleting Files
+
+# import os
+# os.remove("text.txt")
+# print("file deleted successfully")
+# os.rmdir("abcd")
+# print("directory deleted successfully")
+
+
+# mini task
+
+
+# create a new file and write 5 lines 
+
+# with open("newfile.txt", "w") as f:
+#     for i in range(5):
+#         line = input(f"Enter line {i+1}:")
+#         f.write(line + "\n")
+# print("File created and lines written successfully.")   
+# # read the file and print the content
+# with open("newfile.txt", "r") as f:
+#     content = f.read()
+#     print("File Content:")
+#     print(content)
+
+
+
+
+
+
+
+
+
+# ------------------------------------------------------
+
+# Topic 10 — Exception Handling in Python
+
+# In programming, errors can happen. Python uses exceptions to handle these errors gracefully (without crashing the program).
+
+# 🔹 Types of Errors
+
+# Syntax Errors → mistakes in code structure.
+# print("Hello"   # ❌ missing closing bracket
+
+# Runtime Errors (Exceptions) → occur while program is running.
+# print(10 / 0)   # ❌ ZeroDivisionError
+
+
+# 🔹 Try–Except Block
+
+# try:
+#     x = 10/0
+# except ZeroDivisionError:
+#     print("You cannot divide by zero!")
+
+
+# 🔹 Catching Multiple Exceptions
+
+# try:
+#     num = int(input("Enter a number: "))
+#     result = 10 / num
+#     print(f"Result: {result}")
+# except ValueError:
+#     print("Invalid input. Please enter a valid number.")
+# except ZeroDivisionError:
+#     print("Cannot divide by zero.")
+# except Exception as e:
+#     print(f"An error occurred: {e}")
+
+
+# 🔹 Using else and finally
+
+# try:
+#     x = int(input("Enter a number: "))
+#     print(10 / x)
+# except ZeroDivisionError:
+#     print("Cannot divide by zero.")
+# except ValueError:
+#     print("Invalid input. Please enter a valid number.")
+# else:
+#     print("No exceptions occurred.")
+# finally:
+#     print("Program execution completed.")
+
+
+
+# 🔹 Catching All Exceptions
+
+# ⚠️ Not always recommended, but useful for debugging.
+
+# try:
+#     print(10 / 0)
+# except Exception as e:
+#     print("Error:", e)
