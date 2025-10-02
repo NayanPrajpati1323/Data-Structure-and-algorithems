@@ -795,3 +795,190 @@ fruits = ["apple", "banana", "cherry"]
 #     print(10 / 0)
 # except Exception as e:
 #     print("Error:", e)
+
+
+# 🔹 Raising Exceptions
+# You can manually raise an error.
+
+# age = int(input("Enter your age: "))
+
+# if age < 18:
+#     raise ValueError("Age must be at least 18.")
+# else:
+#     print("Access granted.")
+
+
+
+# 🔹 Custom Exceptions
+# Define your own exception class:
+
+# class MyError(Exception):
+#     pass
+
+# try:
+#     raise MyError("Something went wrong!")
+# except MyError as e:
+#     print("Caught:", e)
+
+
+
+
+# --------------------------------------------------------------------
+
+
+
+
+# Topic 11 — Object-Oriented Programming (OOP) in Python
+# OOP is a way of writing programs by organizing code into classes and objects, just like in the real world.
+
+# 🔹 Basic Concepts
+# Class → Blueprint/template for creating objects.
+# Object → Instance of a class.
+# Attributes → Variables inside a class.
+# Methods → Functions inside a class.
+
+#1 bacis class and object
+#2 class methods and self
+#3 inheritance
+#4 Encapsulation
+#5 class variables
+#6 static method
+#7 property decorators
+#8 class inheritance and isinstance() function
+#9 multiple inheritance
+
+# 1 create a car class with attributes like model and brand , then create an instance of this class
+
+# example
+# this is class
+# class Car:
+#     def __init__(self,  brand, model,):
+#         self.model = model
+#         self.brand = brand
+
+# this is object
+# my_car = Car("Mahindra", "BE 9E")
+# print("my car model is:", my_car.model, "and brand is:", my_car.brand)
+
+# Example2
+
+# class Colors:
+#     def __init__(self, color1, color2, color3):
+#         self.color1 = color1
+#         self.color2 = color2
+#         self.color3 = color3
+
+# color = Colors("red", "blue", "green")
+# print("my fav colors are:", color.color1, color.color2, color.color3)
+
+
+# Exmaple3
+
+# class Animals:
+#     def __init__(self, name, species, age):
+#         self.name = name
+#         self.species = species
+#         self.age = age
+
+# animal = Animals("dog", "mammal", 5)
+# print("my animal name is:", animal.name, "species is:", animal.species, "and age is:", animal.age)
+
+
+ 
+
+# 🔹 The __init__ Method
+# Special method (constructor) runs automatically when object is created.
+# self refers to the current object.
+
+# class School:
+#     school = "Prakash High Schoole"
+#     def __init__ (self, name, standard, rollno):
+#         self.name = name
+#         self.standard = standard
+#         self.rollno = rollno
+
+# name = input("Enter your name:")
+# standard = input("Enter your standard:")
+# rollno = input("Enter your roll no:")
+
+# student = School(name, standard, rollno)
+# print("My name is:", student.name, "standard is:", student.standard, "roll no is:", student.rollno, "and school name is:", student.school)  
+
+
+# class Employee:
+#     state = "Gujarat"
+#     def __init__ (self, name, age, salary):
+#         self.name = name
+#         self.age = age
+#         self.salary = salary
+# name = input("Enter your name:")
+# age = int(input("Enter your age"))
+# salary = int(input("Enter your salary:"))
+
+# print(f"Hello sir my name is {name} and I'm {age} years old and my recent compney pays me {salary} and I'm from {Employee.state}")
+
+
+
+
+# 🔹 Inheritance
+# A class can inherit from another class.
+
+# if we wants to create a new class with some extra features from existing class then we can use inheritance
+# class Animals:
+#     def __init__(self, name, species):
+#         self.name = name
+#         self.species = species
+
+# class Dog(Animals):
+#     def bark(self):
+#         return "Woof!"
+    
+# dog = Dog("Buddy", "Canine")
+# print(dog.name)          # Buddy
+# print(dog.species) 
+# print(dog.bark())     # Canine
+
+# class Car:
+#     def __init__(self, model, brand):
+#         self.model = model
+#         self.brand = brand
+
+# class ElectricCar(Car):
+#     def __init__ (self, version, realease_date, model, brand):
+#         super().__init__(model, brand)
+#         self.version = version
+#         self.realease_date = realease_date
+# model = input("Enter your car model:")
+# brand = input("Enter your car brand:")
+# version = input("Enter your car version:")
+# realease_date = input("Enter your car realease date:")
+
+# car = ElectricCar(model, brand, version, realease_date)
+# print("my car model is:", car.model, "and brand is:", car.brand, "version is:", car.version, "and realease date is:", car.realease_date)
+
+
+# multiple inheritance
+
+# class Car:
+#     def __init__ (self, model):
+#         self.model = model
+# class Car1(Car):
+#     def __init__ (self,model, brand):
+#         super().__init__(model)
+#         self.brand = brand
+# class Car2(Car1):
+#     def __init__(self, model, brand, version):
+#         super().__init__(model, brand)
+#         self.version = version
+
+# model = input("Enter your car model:")
+# brand = input("Enter your car brand:")
+# version = input("Enter your car version:")
+
+# car = Car2(model, brand, version)
+# print("my car model is:", car.model, "and brand is:", car.brand, "and version is:", car.version)
+
+
+
+# 🔹 Encapsulation (Data Hiding)
+
