@@ -982,3 +982,68 @@ fruits = ["apple", "banana", "cherry"]
 
 # 🔹 Encapsulation (Data Hiding)
 
+# class BankAccount:
+#     def __init__(self, balance):
+#         self.__balance = balance  # private variable
+
+#     def deposit(self, amount):
+#         self.__balance += amount
+
+#     def get_balance(self):
+#         return self.__balance
+
+# acc = BankAccount(1000)
+# acc.deposit(500)
+# print(acc.get_balance())   # 1500
+# # print(acc.__balance) ❌ Error (private)
+# print(acc._BankAccount__balance)  # 1500 (not recommended)
+
+
+# 🔹 Polymorphism
+# Different classes can define the same method in different ways.
+
+# class cat:
+#     def speak(self):
+#         return "meow"
+# class dog:
+#     def speak(self):
+#         return "woof"
+    
+# def animal_sound(animal):
+#     print(animal.speak())
+# cat = cat()
+# dog = dog()
+# animal_sound(cat)
+# animal_sound(dog)
+
+
+# 🔹 Abstraction
+# Use abc module to create abstract classes (must be implemented in child classes).
+
+
+# from abc import ABC, abstractmethod
+
+# class Shape(ABC):
+#     @abstractmethod
+#     def area(self):
+#         pass
+
+# class Circle(Shape):
+#     def __init__(self, r):
+#         self.r = r
+
+#     def area(self):
+#         return 3.14 * self.r * self.r
+
+# c = Circle(5)
+# print(c.area())  # 78.5
+
+
+
+
+# Small Exercises 📝
+# Create a Person class with attributes (name, age) and a method to display them.
+# Create an Employee class that inherits from Person and adds salary.
+# Create a BankAccount class with deposit/withdraw methods.
+# Create a Shape abstract class with area() and implement Rectangle & Circle.
+# Create a Library class to store books and allow adding/searching.
